@@ -1,0 +1,364 @@
+/* initials */
+:root {
+  --primary-color: #0000ff;
+  --secondary-color: #000000;
+  --tertiary-color: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: calc(7rem + 1vw);
+  text-align: center;
+}
+h2 {
+  font-size: calc(6rem + 1vw);
+}
+h3 {
+  font-size: calc(5rem + 1vw);
+}
+h4 {
+  font-size: calc(4rem + 1vw);
+}
+h5 {
+  font-size: calc(3rem + 1vw);
+}
+h6 {
+  font-size: calc(2rem + 1vw);
+}
+
+img {
+  width: 100%;
+}
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.section-title {
+  font-weight: 400;
+  font-size: 5vw;
+  margin: 6rem 0;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  background: var(--primary-color);
+  width: 10rem;
+  height: 0.5rem;
+  border-radius: 1rem;
+  left: 50%;
+  bottom: -0.3rem;
+  transform: translateX(-50%);
+}
+/* header | nav-bar, header-image, header content, call to action */
+header {
+  width: 100%;
+  height: 120vh;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 255, 0.8),
+      rgba(72, 2, 112, 0.6)
+    ),
+    url("../img/landing.jpg") center no-repeat;
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+}
+.nav-bar {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem 6rem;
+  background: rgba(0, 0, 0, 0.75);
+  box-shadow: 0.2rem 0.25rem 0.75rem rgba(255, 255, 255, 0.75);
+}
+
+nav {
+  width: auto;
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+.logo img {
+  width: 120px;
+  color: var(--tertiary-color);
+  z-index: 100;
+}
+
+.logo {
+  transform: translateX(-100rem);
+  animation: slideIn 0.5s forwards;
+}
+
+.nav-links ul {
+  display: flex;
+}
+
+.nav-links ul li {
+  list-style: none;
+  transform: translateX(200rem);
+  animation: slideIn 0.5s forwards;
+}
+
+.nav-links ul li:nth-child(1) {
+  animation-delay: 0s;
+}
+.nav-links ul li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.nav-links ul li:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.nav-links ul li:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.nav-links ul li:nth-child(5) {
+  animation-delay: 0.8s;
+}
+.nav-links ul li:nth-child(6) {
+  animation-delay: 1s;
+}
+
+.nav-links ul li a {
+  padding: 1rem 0;
+  margin: 0 3rem;
+  position: relative;
+  letter-spacing: 2px;
+  color: var(--tertiary-color);
+}
+
+.nav-links ul li a:last-child {
+  margin-right: 0;
+}
+
+.nav-links ul li a::before,
+.nav-links ul li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+  left: 0;
+  transform: scaleX(0);
+  transition: all 0.5s;
+}
+
+.nav-links ul li a::before {
+  top: 0;
+  transform-origin: left;
+}
+
+.nav-links ul li a::after {
+  bottom: 0;
+  transform-origin: right;
+}
+
+.nav-links ul li a:hover::before,
+.nav-links ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+@keyframes slideIn {
+  from {
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.menu {
+  display: none;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.menu div {
+  width: 25px;
+  height: 3px;
+  background-color: var(--tertiary-color);
+  margin: 5px;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+.content {
+  width: 75%;
+  height: 100vh;
+  margin: auto;
+  color: var(--tertiary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-muted {
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.507);
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+}
+
+.content h1 {
+  font-size: 6vw;
+  font-weight: lighter;
+  text-transform: capitalize;
+}
+
+.content img {
+  width: 20px;
+}
+
+.address {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.content a {
+  color: var(--tertiary-color);
+  font-size: 2rem;
+  padding: 0.8rem 2.5rem;
+  border: ridge 0.3rem var(--tertiary-color);
+  border-radius: 3rem;
+  margin-top: 4rem;
+  transition: ease-in-out 0.5s;
+}
+
+.content a:hover {
+  background: var(--primary-color);
+}
+
+/* About section */
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.about-img {
+  width: 100vw;
+}
+.about-img img {
+  width: 100%;
+}
+
+.about-text {
+  width: 100vw;
+  font-size: 1.6rem;
+  padding-left: 5rem;
+}
+
+.about-text p {
+  letter-spacing: 0.2rem;
+}
+
+.about-text a {
+  color: var(--tertiary-color);
+  background: var(--primary-color);
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  padding: 1.2rem 3rem;
+  border-radius: 3rem;
+}
+/* ipad mini (768) */
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav-bar {
+    padding: 0.5rem 1.2rem;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 120vh;
+    top: 8vh;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .nav-links ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-links ul li {
+    margin: 20% auto;
+    opacity: 0;
+  }
+  .menu {
+    display: block;
+  }
+  .content {
+    width: 95%;
+  }
+  .content a {
+    font-size: 1.5rem;
+  }
+  .text-muted {
+    font-size: 1.5rem;
+  }
+  .about-content {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .about-text {
+    padding: 2rem 0 0 0;
+    text-align: center;
+  }
+  .about-text p {
+    text-align: left;
+  }
+}
+
+/* nav-bar animation */
+.nav-active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
