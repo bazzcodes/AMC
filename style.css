@@ -279,6 +279,18 @@ nav {
   padding: 1.2rem 3rem;
   border-radius: 3rem;
 }
+
+footer {
+  text-align: center;
+  background: var(--primary-color);
+  height: 5rem;
+}
+
+footer p {
+  font-size: 1.6rem;
+  color: var(--tertiary-color);
+  line-height: 5rem;
+}
 /* ipad mini (768) */
 
 @media screen and (max-width: 768px) {

@@ -23,3 +23,9 @@ const navSlide = () => {
 };
 
 navSlide();
+const getYear = () => {
+  const date = new Date();
+  return date.getFullYear();
+};
+
+document.querySelector(".date").innerHTML = getYear();
