@@ -295,11 +295,6 @@ footer p {
 /* ipad mini (768) */
 
 @media screen and (max-width: 768px) {
-  body,
-  html {
-    overflow-x: hidden;
-  }
-
   .nav-bar {
     padding: 0.5rem 1.2rem;
   }
